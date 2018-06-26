@@ -1,0 +1,18 @@
+{
+  "name": "geoffwilliams-rsyslog_client",
+  "version": "0.1.0",
+  "author": "geoffwilliams",
+  "summary": "lightweight rsyslog client for linux",
+  "license": "Apache-2.0",
+  "source": "https://github.com/GeoffWilliams/puppet-rsyslog_client.git",
+  "project_page": null,
+  "issues_url": "https://api.github.com/repos/GeoffWilliams/puppet-rsyslog_client/issues{/number}",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": ">= 1.0.0"
+    }
+  ],
+  "data_provider": null,
+  "project_url": "https://github.com/GeoffWilliams/puppet-rsyslog_client.git"
+}
