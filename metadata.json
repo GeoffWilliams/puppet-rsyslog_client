@@ -11,6 +11,10 @@
     {
       "name": "puppetlabs-stdlib",
       "version_requirement": ">= 1.0.0"
+    },
+    {
+      "name": "geoffwilliams-filemagic",
+      "version_requirement": "0.5.2"
     }
   ],
   "data_provider": null,

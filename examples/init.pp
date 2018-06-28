@@ -1,12 +1,18 @@
-# The baseline for module testing used by Puppet Inc. is that each manifest
-# should have a corresponding test manifest that declares that class or defined
-# type.
-#
-# Tests are then run by using puppet apply --noop (to check for compilation
-# errors and view a log of events) or by fully applying the test in a virtual
-# environment (to compare the resulting system state to the desired state).
-#
-# Learn more about module testing here:
-# https://docs.puppet.com/guides/tests_smoke.html
-#
-include ::rsyslog_client
+# @PDQTest
+class { "rsyslog_client":
+  settings => [
+    {'$FileOwner'      => 'root'},
+    {'$FileGroup'      => 'root'},
+    {'$FileCreateMode' => '0600'},
+    {'$DirOwner'       => 'root'},
+    {'$DirGroup'       => 'root'},
+    {'$DirCreateMode'  => '0750'},
+  ],
+  entries => {
+    "auth,user.*"                                                      => "/var/log/messages",
+    "kern.*"                                                           => "/var/log/kern.log",
+    "daemon.*"                                                         => "/var/log/daemon.log",
+    "syslog.*"                                                         => "/var/log/syslog",
+    "lpr,news,uucp,local0,local1,local2,local3,local4,local5,local6.*" => "/var/log/unused.log",
+  }
+}
