@@ -5,13 +5,11 @@
 
 **Classes**
 
-* [`rsyslog_client`](#rsyslog_client): rsyslog_client  Support for installation and configuration of rsyslog. We support the bare minimum needed to enable support on RHEL7, eg all 
+* [`rsyslog_client`](#rsyslog_client): Support for installation and configuration of rsyslog.
 
 ## Classes
 
 ### rsyslog_client
-
-rsyslog_client
 
 Support for installation and configuration of rsyslog. We support the bare minimum needed to
 enable support on RHEL7, eg all legacy config/no rainer script. This is inline with the
